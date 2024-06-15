@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./Components/Header";
+import Header from "./components/Header";
 import ListadoGastos from "./components/ListadoGastos";
 import IconoNuevoGasto from "./img/nuevo-gasto.svg";
 import { generarId } from "./helpers";
