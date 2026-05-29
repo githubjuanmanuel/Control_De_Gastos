@@ -42,7 +42,7 @@ function App() {
   }, [presupuesto]);
 
   useEffect(() => {
-    localStorage.setItem("gastos", JSON.stringify(gastos) ?? [gastos]);
+    localStorage.setItem("gastos", JSON.stringify(gastos) ?? []);
   }, [gastos]);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ function App() {
       );
       setGastosFiltrados(gastosFiltrados);
     }
-  }, [filtro]);
+  }, [filtro, gastos]);
 
   const handleNuevoGasto = () => {
     setModal(true);
