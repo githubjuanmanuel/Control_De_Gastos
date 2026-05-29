@@ -40,8 +40,8 @@ jobs:
       if: github.ref != 'refs/heads/feature'
       run: | 
         docker build \
-          -t ${{ secrets.DOCKER_USERNAME }}/control-gastos:${{ github.sha }} \
-          -t ${{ secrets.DOCKER_USERNAME }}/control-gastos:latest .
+          -t ${{ secrets.DOCKER_USERNAME }}/control-de-gastos:${{ github.sha }} \
+          -t ${{ secrets.DOCKER_USERNAME }}/control-de-gastos:latest .
 
     - name: Login to Docker Hub
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -53,5 +53,5 @@ jobs:
     - name: Push Docker Image
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/control-gastos:${{ github.sha }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/control-gastos:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/control-de-gastos:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/control-de-gastos:latest
