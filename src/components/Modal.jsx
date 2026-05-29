@@ -4,7 +4,7 @@ import Mensaje from "./Mensaje";
 import CerrarBTN from "../img/cerrar.svg";
 
 
-// eslint-disable-next-line react/prop-types
+
 const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar, serGastoEditar }) => {
 
   const [nombre, setNombre] = useState('')

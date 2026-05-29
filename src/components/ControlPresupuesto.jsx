@@ -1,10 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import PropTypes from "prop-types";
+
 import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-// eslint-disable-next-line react/prop-types
+
 const ControlPresupuesto = ({
   gastos,
   setGastos,
@@ -17,7 +17,7 @@ const ControlPresupuesto = ({
   const [gastado, setGastado] = useState(0);
 
   useEffect(() => {
-    // eslint-disable-next-line react/prop-types
+    
     const totalGastado = gastos.reduce(
       (total, gasto) => gasto.cantidad + total,
       0
@@ -79,6 +79,14 @@ const ControlPresupuesto = ({
       </div>
     </div>
   );
+};
+
+ControlPresupuesto.propTypes = {
+  gastos: PropTypes.array.isRequired,
+  setGastos: PropTypes.func.isRequired,
+  presupuesto: PropTypes.number.isRequired,
+  setPresupuesto: PropTypes.func.isRequired,
+  setIsValidPresupuesto: PropTypes.func.isRequired
 };
 
 export default ControlPresupuesto;

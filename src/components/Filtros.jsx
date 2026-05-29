@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Filtros = ({filtro, setFiltro}) => {
   return (
@@ -18,6 +18,11 @@ const Filtros = ({filtro, setFiltro}) => {
       </form>
     </div>
   );
+};
+
+Filtros.propTypes = {
+  filtro: PropTypes.string.isRequired,
+  setFiltro: PropTypes.func.isRequired
 };
 
 export default Filtros;
