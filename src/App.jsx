@@ -42,7 +42,7 @@ function App() {
   }, [presupuesto]);
 
   useEffect(() => {
-    localStorage.setItem("gastos", JSON.stringify(gastos) ?? []);
+    localStorage.setItem("gastos", JSON.stringify(gastos) ?? [gastos]);
   }, [gastos]);
 
   useEffect(() => {
