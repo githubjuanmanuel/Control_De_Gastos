@@ -3,9 +3,9 @@ name: Build-App
 
 on:
   push:
-    branches: [ "main", "qa", "dev", "feature" ]
-  pull_request:
-    branches: [ "main", "qa", "dev" ]
+    branches: [ "feature", "main", "qa", "dev" ]
+
+  workflow_dispatch:
 
 jobs:
   build:
