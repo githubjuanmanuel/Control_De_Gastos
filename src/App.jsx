@@ -59,7 +59,7 @@ function App() {
       );
       setGastosFiltrados(gastosFiltrados);
     }
-  }, [filtro]);
+  }, [filtro, gastos]);
 
   const handleNuevoGasto = () => {
     setModal(true);
